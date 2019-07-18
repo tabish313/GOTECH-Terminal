@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E39A265-BDD1-4C9E-8354-A1950557F774}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GOTECH</RootNamespace>
+    <AssemblyName>GOTECH</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>39a8ea92</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Extras\Crypto-UI-Dashboard-Demo-master\InspirationDemo\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.110.0\lib\net45\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.110.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.110.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VisualReactiveWinForms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ee513efc52b401d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Visual.Reactive.WinForms.1.0.0\lib\VisualReactiveWinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\BusinessGoals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\BusinessGoals.Designer.cs">
+      <DependentUpon>BusinessGoals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\BusinessLists.cs" />
+    <Compile Include="Business\GoalPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\GoalPanel.Designer.cs">
+      <DependentUpon>GoalPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\Goals.cs" />
+    <Compile Include="Business\NewBusinessPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\NewBusinessPlan.Designer.cs">
+      <DependentUpon>NewBusinessPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UpdateCurrentGoals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\UpdateCurrentGoals.Designer.cs">
+      <DependentUpon>UpdateCurrentGoals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course\AddCourse.Designer.cs">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\ModifyCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course\ModifyCourse.Designer.cs">
+      <DependentUpon>ModifyCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crypto\Gulipso.cs" />
+    <Compile Include="Data\BusinessPlans.cs" />
+    <Compile Include="Data\Courses.cs" />
+    <Compile Include="Data\DbEntities.cs" />
+    <Compile Include="Data\Goals.cs" />
+    <Compile Include="Data\GoalsInfo.cs" />
+    <Compile Include="Data\Lists.cs" />
+    <Compile Include="Data\SQLiteConfiguration.cs" />
+    <Compile Include="Data\Students.cs" />
+    <Compile Include="Data\Trainers.cs" />
+    <Compile Include="Data\Users.cs" />
+    <Compile Include="Help\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Export.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\Export.Designer.cs">
+      <DependentUpon>Export.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\Import.Designer.cs">
+      <DependentUpon>Import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\UserSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\UserSetting.Designer.cs">
+      <DependentUpon>UserSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\SearchBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\SearchBox.Designer.cs">
+      <DependentUpon>SearchBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Students\NewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\NewStudent.Designer.cs">
+      <DependentUpon>NewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\StudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\StudentInfo.Designer.cs">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\ViewCourseStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\ViewCourseStudents.Designer.cs">
+      <DependentUpon>ViewCourseStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trainer\ViewTrainerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trainer\ViewTrainerInfo.Designer.cs">
+      <DependentUpon>ViewTrainerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\tempGoals.cs" />
+    <Compile Include="Utils\BusinessGoals.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\BusinessGoals.Designer.cs">
+      <DependentUpon>BusinessGoals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CurrentGoals.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\CurrentGoals.Designer.cs">
+      <DependentUpon>CurrentGoals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\OvalPicturebox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\PlanBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\PlanBox.Designer.cs">
+      <DependentUpon>PlanBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\tabMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\tabMenu.Designer.cs">
+      <DependentUpon>tabMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Browser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\Browser.Designer.cs">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DragControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\Elipse.cs" />
+    <Compile Include="Utils\GradientFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\PanelInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\PanelInfo.Designer.cs">
+      <DependentUpon>PanelInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Progress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\Progress.Designer.cs">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ServoFlatButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\ServoImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\ServoLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\Styles.cs" />
+    <EmbeddedResource Include="Business\BusinessGoals.resx">
+      <DependentUpon>BusinessGoals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\GoalPanel.resx">
+      <DependentUpon>GoalPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\NewBusinessPlan.resx">
+      <DependentUpon>NewBusinessPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\UpdateCurrentGoals.resx">
+      <DependentUpon>UpdateCurrentGoals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\AddCourse.resx">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\ModifyCourse.resx">
+      <DependentUpon>ModifyCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\Export.resx">
+      <DependentUpon>Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\Import.resx">
+      <DependentUpon>Import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\UserSetting.resx">
+      <DependentUpon>UserSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\Resource.resx" />
+    <EmbeddedResource Include="Home\SearchBox.resx">
+      <DependentUpon>SearchBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\NewStudent.resx">
+      <DependentUpon>NewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\StudentInfo.resx">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\ViewCourseStudents.resx">
+      <DependentUpon>ViewCourseStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainer\ViewTrainerInfo.resx">
+      <DependentUpon>ViewTrainerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\BusinessGoals.resx">
+      <DependentUpon>BusinessGoals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\CurrentGoals.resx">
+      <DependentUpon>CurrentGoals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\PlanBox.resx">
+      <DependentUpon>PlanBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\tabMenu.resx">
+      <DependentUpon>tabMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\Browser.resx">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\PanelInfo.resx">
+      <DependentUpon>PanelInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\Progress.resx">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\ServoFlatButton.resx">
+      <DependentUpon>ServoFlatButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\ServoLabel.resx">
+      <DependentUpon>ServoLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader_white.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron-bottom-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-course.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\House-08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black-Board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users - 02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graduate-01-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help - 02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sync - 02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Certificate02-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student-Read-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teacher-02-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book-Closed-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book-Closed-WF-Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garbage-Closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_sample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_sample1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Submit-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garbage-Closed-Black-padding-10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-Black-padding-10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data-Edit-Black-padding-10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload - 02-Black-padding-10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Submit-01-Black-padding-10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data-Edit-White-padding-10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Submit-01-White-padding-10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder Remove-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder Remove-WF1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BANNER.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BANNER2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon.ico" />
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
